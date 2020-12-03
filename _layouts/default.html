@@ -65,10 +65,12 @@ layout: table_wrappers
         {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
-    <footer class="site-footer">
-      <a href="/en/"><img src="{{site.baseurl}}/assets/images/en.png" alt="Anglais"></a>
-      <a href="/fr/" style="margin-left: 10px"><img src="{{site.baseurl}}/assets/images/fr.png" alt="Français"></a>
-    </footer>
+    {% unless site.baseurl contains 'help' %}
+      <footer class="site-footer">
+        <a href="/en/"><img src="{{site.baseurl}}/assets/images/en.png" alt="Anglais"></a>
+        <a href="/fr/" style="margin-left: 10px"><img src="{{site.baseurl}}/assets/images/fr.png" alt="Français"></a>
+      </footer>
+    {% endunless %}
   </div>
   <div class="main" id="top">
     <div id="main-header" class="main-header">
